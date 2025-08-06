@@ -219,7 +219,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Ping check
-if ($_GET['e'] === 'ping_proxy') {
+if (isset($_GET['e']) && $_GET['e'] === 'ping_proxy') {
     header('Content-Type: text/plain');
     echo 'pong';
     exit;
